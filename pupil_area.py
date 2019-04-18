@@ -1,9 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Wed Feb 13 12:59:24 2019
-
-@author: katerina
+@author: Katerina Gratsea
+ 
+The user should choose the boundray value (line 23), the min value of the pupil_area (line 47)
+and the region of images that wants to analyze (line 43). 
+The boundary value sets the limit that the contour is drawn. It does not affect the result, but one could have different
+boundary values (line 23) and get the mean and stdev of the results.
 """
 
 from libtiff import TIFF
