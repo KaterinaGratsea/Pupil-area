@@ -28,7 +28,7 @@ for j in range (15,16): #boundary value
         str_count=str(count) # transfrom int to str
         
         im = image
-        img_one_shape = image
+        img = cv2.imwrite(str_count + '.tif',im)
         
         #boundary value
         boundary = j
@@ -48,6 +48,7 @@ for j in range (15,16): #boundary value
                     count_list.append(count)
                     area_list.append(contour_area)
                     area_changes_list.append(contour_area - prev_contour_area)
+                    img_one_shape = cv2.imread(str_count + '.tif')
                     cv2.drawContours(img_one_shape, contours, i, (55,255,0), 1)
                     cv2.imwrite(str_count + '_one_shape_boundary_' + str_boundary + '.jpg', img_one_shape) #initial img with contours
         
